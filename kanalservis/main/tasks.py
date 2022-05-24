@@ -31,7 +31,7 @@ def timemanager():
     def data_from_google_sheets(): #вытаскивает все данные из google sheets и помещает их в список 
         rates = ExchangeRates(date.today())
         
-        gs = gspread.service_account(filename='C:/Users/bgrin/Desktop/kanalservis/kanalservis/main/json_f/testp-350822-853614e7357c.json')  # подключаем файл с ключами и пр.
+        gs = gspread.service_account(filename='main/json_f/testp-350822-853614e7357c.json')  # подключаем файл с ключами и пр.
         sh = gs.open_by_key('1qvz1ZhzZTZz5Y8Rqb_HdPCSMQVMJZELuA6fDUAFpZRY')  # подключаем таблицу по ID
         worksheet = sh.sheet1
         res = worksheet.get_all_values()
