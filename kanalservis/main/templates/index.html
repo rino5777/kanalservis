@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="refresh" content="">
+    <meta charset="utf-8">
+    <title>Home
+    </title>
+    
+    <!-- Mobile Specific Meta Tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Favicon and Apple Icons-->
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <link rel="icon" type="image/png" href="{% static 'favicon.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'touch-icon-iphone.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'touch-icon-ipad.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'touch-icon-iphone-retina.png' %}">
+    <link rel="apple-touch-icon" sizes="167x167" href="{% static 'touch-icon-ipad-retina.png' %}">
+    <!-- Vendor Styles including: Bootstrap, Font Icons, Plugins, etc.-->
+    <link rel="stylesheet" media="screen" href="{% static 'css/vendor.min.css' %}">
+    <!-- Main Template Styles-->
+    <link id="mainStyles" rel="stylesheet" media="screen" href="{% static 'css/styles.min.css' %}">
+    <!-- Modernizr-->
+    <script src=" {% static 'js/modernizr.min.js' %}"></script>
+  </head>
+  <!-- Body-->
+  <body>
+
+   
+    <header class="navbar navbar-sticky">
+     
+      <div class="site-branding">
+        <div class="inner">
+         
+          <!-- Site Logo--><img src="{% static 'img/logo/logo.png' %}" width="100" height="100" style="padding: 5px 10px 5px 20px; " >
+        </div>
+      </div>
+     
+     
+    </header>
+    <!-- Off-Canvas Wrapper-->
+    
+
+
+
+
+    {% block content %}
+    {% endblock content %}
+
+
+
+
+
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+           
+          </div>
+          <hr class="hr-light mt-2 margin-bottom-2x">
+          
+          <!-- Copyright-->
+          <p class="footer-copyright">© All rights reserved. </p>
+        </div>
+      </footer>
+
+
+
+
+
+
+
+
+
+    <!-- Back To Top Button--><a class="scroll-to-top-btn" href="#"><i class="icon-arrow-up"></i></a>
+    <!-- Backdrop-->
+    <div class="site-backdrop"></div>
+    <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
+    <script src="{% static 'js/vendor.min.js' %}"></script>
+    <script src="{% static 'js/scripts.min.js' %}"></script>
+  </body>
+</html>

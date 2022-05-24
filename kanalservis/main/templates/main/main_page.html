@@ -1,0 +1,61 @@
+{% extends 'index.html' %}
+{% load static %}
+
+    {% block content %}
+    
+<!-- Page Content-->
+    <div class="row">
+        <div class="col-lg-1"></div>
+    <div class="col-lg-6">
+    
+
+        <div class="table-responsive">
+            <table class="table">
+            <thead class="table table-inverse">
+                <tr>
+                <th>№</th>
+                <th>заказ №</th>
+                <th>стоимость,$</th>
+                <th>срок поставки</th>
+                <th>стоимость в руб</th>
+                </tr>
+            </thead>
+            <tbody>
+                    {% for elem in data %}   
+                    {% if elem.actual == True  %}     <!--если срок заказа истек, то строка окрашивается в красный  -->    
+                <tr class="table">
+                <th scope="row"> {{elem.num}}</th>
+                <td> {{elem.order}}</td>
+                <td> {{elem.priceUSD}}</td>
+                <td> {{elem.date_arr}}</td>
+                <td> {{elem.priceRUB}}</td>
+                </tr>
+                {% else %}
+                <tr class="table-danger">
+                    <th scope="row"> {{elem.num}}</th>
+                    <td> {{elem.order}}</td>
+                    <td> {{elem.priceUSD}}</td>
+                    <td> {{elem.date_arr}}</td>
+                    <td> {{elem.priceRUB}}</td>
+                    {% endif %}
+                    {% endfor %}
+                
+            </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+    <div class="col-lg-4">
+        
+
+
+
+     
+    </div>
+    <div class="col-lg-1"></div>
+    </div>
+
+
+{% endblock content %}
