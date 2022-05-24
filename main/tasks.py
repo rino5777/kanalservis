@@ -66,7 +66,7 @@ def timemanager():
     data = Data_google.objects.all()
   
     # Create an new Excel file and add a worksheet.
-    workbook = xlsxwriter.Workbook('xlsx/overdue.xlsx')
+    workbook = xlsxwriter.Workbook('xlsx/overdue.xlsx')# формируется xlsx файл из заказов срок которых прошел
     workxl = workbook.add_worksheet()
 
     # Widen the first column to make the text clearer.
@@ -92,9 +92,11 @@ def timemanager():
         workxl.write(i,4, index[4])
 
     workbook.close()
-    telegram_send.send(messages=['заказы срок которых прошел ' ])
-    with open('xlsx/overdue.xlsx', "rb") as f:
-        telegram_send.send(files =[f])
+#-----ОТПРАВКА СООБЩЕНИЙ В TELEGRAM 
+
+    # telegram_send.send(messages=['заказы срок которых прошел ' ])
+    # with open('xlsx/overdue.xlsx', "rb") as f:
+    #     telegram_send.send(files =[f])
     return  data
 
 
