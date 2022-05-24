@@ -6,6 +6,6 @@
 отпрвка сообщений по telegram закомментирована  
 ( перед запуском  telegram  ознакомтесь https://medium.com/@robertbracco1/how-to-write-a-telegram-bot-to-send-messages-with-python-bcdf45d0a580)
 
-
+ссылка на Google Sheets https://docs.google.com/spreadsheets/d/1qvz1ZhzZTZz5Y8Rqb_HdPCSMQVMJZELuA6fDUAFpZRY/edit#gid=0
 
 
